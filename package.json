@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "browser-sync": "browser-sync --server --files \"*\"",
-    "sass": "node-sass --source-map-embed styles/styles.scss test.css",
+    "sass": "node-sass --source-map-embed styles/styles.scss styles.css",
     "sass-watch": "node-sass --source-map-embed --watch styles/styles.scss test.css",
     "dev": "concurrently npm:sass-watch npm:browser-sync",
-    "lint": "stylelint test.css"
+    "lint": "stylelint styles/styles.scss --syntax scss"
   },
   "repository": {
     "type": "git",
